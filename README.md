@@ -15,7 +15,7 @@ This repository contains the MATLAB code for an experiment that involves disting
 
 ### Part 1: Biological Movement Identification
 
-1. Run the `main_biological.m` script in MATLAB.  
+1. Run the `main_biological.m` script in MATLAB. 
 2. You will be presented with a visual of a biological walker. Your task is to identify the direction of movement:
    - Press the **up-arrow key** if the walker is moving **away from you** (backward).
    - Press the **down-arrow key** if the walker is moving **toward you** (forward).
@@ -28,10 +28,17 @@ This repository contains the MATLAB code for an experiment that involves disting
    - Press the **up-arrow key** if the dots are moving **away from you** (backward).
    - Press the **down-arrow key** if the dots are moving **toward you** (forward).
 
+### Part 3: Data Analysis
+
+1. After completing both phases, you can analyze your results using the `analyze.m` script. This script will generate the corresponding plots based on your performance.
+2. You should set the `number_of_subject` variable equal to the number you entered at the first of running main files.
+3. The `Data` folder contains the results of **8 subjects** that you can use for further analysis or comparison.
+
 ## Additional Notes
 
 - For best results, run the experiment in a **dark room** to minimize visual distractions.
-- Ensure you take the break between phases to avoid fatigue affecting the results.
+- Ensure you take a break(10 minutes) between phases to avoid fatigue affecting the results.
+- Enter a similar number/name at the beginning of both phases.
 
 ### Requirements
 - MATLAB with Psychtoolbox installed.
