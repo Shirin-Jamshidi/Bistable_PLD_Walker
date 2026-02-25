@@ -5,7 +5,7 @@ clear all;
 
 % Initialization
 n = 20;
-totalVideos = 11*n; % 19 videos*20
+totalVideos = 11*n; % 11 videos*20
 participantName = input('Enter the participant name: ', 's');
 rng(40); % Sets the random seed to 40
 
@@ -38,7 +38,7 @@ shuffledVideoFiles = videoFile(randperm(length(videoFile)));
 % Initialize variables
 Response = cell(1, totalVideos);
 ReactionTime = cell(1, totalVideos);
-% totalVideos = 5;
+
 try
     % Loop through all videos
     for j = 1:totalVideos
@@ -118,26 +118,7 @@ function [response, reactionTime, negativePoint] = playVideoAndCaptureResponse(w
         reactionTime = frameCount * frameDuration;
         negativePoint = negativePoint + 1;
     end
-%     % Correct the comparison logic for the response
-%     if contains(videoFile, '-')
-%         if strcmp(response, '-')
-%             message = 'Correct!';
-%         else
-%             message = 'Not Correct!';
-%         end
-%     else
-%         if strcmp(response, '+')
-%             message = 'Correct!';
-%         else
-%             message = 'Not Correct!';
-%         end
-%     end
-%
-%     % Display feedback message
-%     Screen('FillRect', window, [0 0 0]);
-%     DrawFormattedText(window, message, 'center', 'center', [255 255 255]);
-%     Screen('Flip', window);
-%     WaitSecs(1);
+
       % Display a black screen for 1 second after feedback
       Screen('FillRect', window, [0 0 0]); % Black screen
       Screen('Flip', window);
@@ -162,4 +143,5 @@ function drawFixationCross(window, windowRect)
     
     % Flip to the screen
     Screen('Flip', window);
+
 end
