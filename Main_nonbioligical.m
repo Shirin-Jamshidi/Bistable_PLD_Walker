@@ -5,7 +5,7 @@ clear all;
 
 % Initialization
 n = 20;
-totalVideos = 11*n; % 19 videos*20
+totalVideos = 11*n; % 11 videos*20
 participantName = input('Enter the participant name: ', 's');
 rng(42); % Sets the random seed to 42
 
@@ -38,7 +38,7 @@ shuffledVideoFiles = videoFile(randperm(length(videoFile)));
 % Initialize variables
 Response = cell(1, totalVideos);
 ReactionTime = cell(1, totalVideos);
-% totalVideos = 5;
+
 try
     % Loop through all videos
     for j = 1:totalVideos
@@ -162,4 +162,5 @@ function drawFixationCross(window, windowRect)
     
     % Flip to the screen
     Screen('Flip', window);
+
 end
